@@ -1,0 +1,64 @@
+#pseudocode
+#Bai tap 1: Tim gia tri lon nhat cua 2 so tu nhien nhap tu ban phim
+BEGIN
+INPUT a,b
+IF a=b THEN
+	PRINT "Gia tri lon nhat la a hoac b"
+	END IF
+ELSE
+	IF a>b THEN
+		PRINT "Gia tri lon nhat la a"
+		END IF
+	ELSE
+		PRINT "Gia tri lon nhat la b"
+	END IF
+END IF
+END
+
+#Bai tap 2: Giai phuong trinh bac 2: ax^2 + bx + c = 0
+BEGIN
+INPUT a,b,c, delta = b*b - 4*a*c
+IF a=0 THEN
+	IF b=0 THEN
+		IF c = 0 THEN 
+			PRINT "Phuong trinh co vo so nghiem"
+		ELSE
+			PRINT "Phuong trinh vo nghiem"
+		END IF
+	ELSE
+		PRINT "Phuong trinh co nghiem duy nhat -c/b"
+	END IF
+ELSE
+	IF delta = 0 THEN
+		PRINT "Phuong trinh co nghiem kep x1 = x2 = -b/(2*a)"
+	ELSE
+		IF delta >0 THEN
+			PRINT "Phuong trinh co 2 nghiem phan biet: x1 = (-b+sqrt(delta))/2*a; x2= (-b -sqrt(delta))/2*a"
+		ELSE
+			PRINT "Phuong trinh vo nghiem"
+		END IF
+	END IF
+END IF
+END
+
+#Bai tap 3: Kiem tra 3 canh a, b, c la tam gia thuong, vuong, can hay tam giac deu
+BEGIN
+INPUT a,b,c
+IF (a=b AND a=c) THEN
+	PRINT "Tam giac deu"
+ELSE
+	IF (a=b AND a<>c) OR (a=c AND a<>b) OR (a<>b AND b=c) THEN
+		PRINT "Tam giac can"
+	ELSE
+		IF c*c=b*b+a*a OR a*a=b*b+c*c OR b*b=a*a+c*c THEN
+			PRINT "Tam giac vuong"
+		ELSE
+			IF a+b>c OR b+c>a OR a+c>b THEN
+				PRINT "Tam giac thuong"
+			ELSE
+				PRINT "Khong thoa man dieu kien"
+			END IF
+		END IF
+	END IF
+END IF
+END
